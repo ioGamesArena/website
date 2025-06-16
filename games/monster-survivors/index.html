@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monster Survivors - Play Free on MonsterSurvivors.com</title>
-    <meta name="description" content="Face the relentless horde, evolve your abilities, and become the ultimate survivor in this addicting action roguelite.">
-    <link rel="canonical" href="https://monstersurvivors.com/games/monster-survivors/">
+    <title>{{GAME_TITLE}} - Play Free on MonsterSurvivors.com</title>
+    <meta name="description" content="{{GAME_DESCRIPTION}}">
+    <link rel="canonical" href="https://monstersurvivors.com/games/{{GAME_URL_SLUG}}/">
     <script src="https://cdn.tailwindcss.com"></script>
     <style> body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; } </style>
 </head>
@@ -25,23 +25,19 @@
     <div class="container mx-auto max-w-5xl p-4 sm:p-6 md:p-8">
         <main class="bg-white rounded-xl shadow-lg p-6 sm:p-8 md:p-12">
             <header class="text-center mb-8">
-                <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900">Monster Survivors</h1>
-                <p class="mt-3 text-lg text-gray-600">面对无情的部落，进化你的能力，成为这款令人上瘾的动作 Roguelite 的终极幸存者</p>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900">{{GAME_TITLE}}</h1>
+                <p class="mt-3 text-lg text-gray-600">{{GAME_SHORT_INTRO}}</p>
             </header>
             <section id="game-container" class="mb-12">
                 <div class="relative w-full overflow-hidden rounded-lg shadow-md pt-[56.25%] bg-black">
-                    <iframe class="absolute top-0 left-0 w-full h-full border-0" src="https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html" title="Monster Survivors Game" allowfullscreen></iframe>
+                    <iframe class="absolute top-0 left-0 w-full h-full border-0" src="{{GAME_IFRAME_URL}}" title="{{GAME_TITLE}} Game" allowfullscreen></iframe>
                 </div>
             </section>
             <article class="prose prose-lg max-w-none">
                 <h2>How to Play</h2>
-                <ul>
-                    <li>使用鼠标移动</li>
-                    <li>攻击是自动的</li>
-                    <li>收集宝石以升级并选择新技能</li>
-                </ul>
+                {{GAME_CONTROLS_AND_HOWTO}}
                 <h2>About This Game</h2>
-                <p>在 Monster Survivors 中，你被扔进了一个充满怪物的世界，你唯一的目标就是生存。这款游戏将激烈的弹幕动作与深入的 roguelite 进程相结合。</p>
+                {{GAME_FULL_DESCRIPTION}}
             </article>
         </main>
     </div>
