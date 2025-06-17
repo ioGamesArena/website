@@ -16,6 +16,14 @@
     </style>
 </head>
 <body class="bg-gray-50">
+    <div id="search-modal" class="fixed inset-0 z-50 hidden bg-white/80 backdrop-blur-sm">
+        <div class="container mx-auto max-w-xl px-4 pt-20">
+            <input type="search" id="modal-search-input" placeholder="Search for games..." class="w-full text-2xl p-4 bg-transparent border-b-2 border-gray-300 focus:border-sky-500 outline-none">
+            <div id="search-results" class="mt-6 max-h-[60vh] overflow-y-auto"></div>
+            <button id="close-search" class="absolute top-6 right-6 p-2 text-gray-500 hover:text-gray-800 text-3xl font-light">×</button>
+        </div>
+    </div>
+
     <header class="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/80 backdrop-blur-sm">
         <div class="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
             <a href="/" class="flex items-center space-x-2">
@@ -32,7 +40,9 @@
                 <a href="/categories/casual/" class="transition-colors hover:text-sky-500">Casual</a>
             </nav>
             <div class="flex items-center space-x-4">
-                <!-- Search button will be added here -->
+                <button id="search-trigger" class="p-2 rounded-full hover:bg-gray-200 transition-colors">
+                    <svg class="h-5 w-5 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="join" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                </button>
             </div>
         </div>
     </header>
@@ -57,5 +67,66 @@
             <p class="text-center text-gray-600">© 2024 Free Games. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // Search functionality
+        const searchModal = document.getElementById('search-modal');
+        const searchTrigger = document.getElementById('search-trigger');
+        const closeSearch = document.getElementById('close-search');
+        const searchInput = document.getElementById('modal-search-input');
+        const searchResults = document.getElementById('search-results');
+
+        // Game data
+        const games = [
+            { title: '2048', url: '/games/2048/', category: 'Puzzle' },
+            { title: 'Little Alchemy 2', url: '/games/little-alchemy-2/', category: 'Puzzle' },
+            { title: 'Moto X3M', url: '/games/moto-x3m/', category: 'Racing' },
+            { title: 'Tiny Fishing', url: '/games/tiny-fishing/', category: 'Casual' },
+            { title: 'Tunnel Rush', url: '/games/tunnel-rush/', category: 'Action' }
+        ];
+
+        // Open search modal
+        searchTrigger.addEventListener('click', () => {
+            searchModal.classList.remove('hidden');
+            searchInput.focus();
+        });
+
+        // Close search modal
+        closeSearch.addEventListener('click', () => {
+            searchModal.classList.add('hidden');
+            searchInput.value = '';
+            searchResults.innerHTML = '';
+        });
+
+        // Close on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !searchModal.classList.contains('hidden')) {
+                searchModal.classList.add('hidden');
+                searchInput.value = '';
+                searchResults.innerHTML = '';
+            }
+        });
+
+        // Search functionality
+        searchInput.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase();
+            if (query.length < 2) {
+                searchResults.innerHTML = '';
+                return;
+            }
+
+            const filteredGames = games.filter(game => 
+                game.title.toLowerCase().includes(query) || 
+                game.category.toLowerCase().includes(query)
+            );
+
+            searchResults.innerHTML = filteredGames.map(game => `
+                <a href="${game.url}" class="block p-4 hover:bg-gray-100 rounded-lg transition-colors">
+                    <div class="font-medium">${game.title}</div>
+                    <div class="text-sm text-gray-500">${game.category}</div>
+                </a>
+            `).join('');
+        });
+    </script>
 </body>
 </html> 
