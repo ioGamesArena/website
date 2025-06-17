@@ -29,19 +29,6 @@
         body {
             font-family: 'Inter', sans-serif;
         }
-        .aspect-w-16 {
-            position: relative;
-            padding-bottom: 56.25%;
-        }
-        .aspect-w-16 > * {
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -316,16 +303,6 @@
         </div>
     </a>
 
-    <a href="../../games/airplane-racer/" class="group block rounded-lg p-2 transition-all duration-300 hover:bg-gray-50">
-        <div class="aspect-w-16 aspect-h-9 overflow-hidden rounded-lg shadow-sm transition-transform duration-300 ease-in-out group-hover:scale-105">
-            <img src="https://www.onlinegames.io/media/posts/268/responsive/Airplane-Racer-xs.jpg" alt="Airplane Racer Thumbnail" class="h-full w-full object-cover">
-        </div>
-        <div class="mt-3">
-            <h3 class="font-semibold text-gray-800 group-hover:text-sky-500 truncate">Airplane Racer</h3>
-            <p class="text-sm text-gray-500">2-Player</p>
-        </div>
-    </a>
-
     <a href="../../games/highway-racer-2/" class="group block rounded-lg p-2 transition-all duration-300 hover:bg-gray-50">
         <div class="aspect-w-16 aspect-h-9 overflow-hidden rounded-lg shadow-sm transition-transform duration-300 ease-in-out group-hover:scale-105">
             <img src="https://www.onlinegames.io/media/posts/323/responsive/Highway-Racer-2-xs.jpg" alt="Highway Racer 2 Thumbnail" class="h-full w-full object-cover">
@@ -543,55 +520,58 @@
         const searchInput = document.getElementById('modal-search-input');
         const searchResults = document.getElementById('search-results');
 
-        // Load games data
+        // Game data
         fetch('../../games.json')
             .then(response => response.json())
             .then(games => {
-                // Open search modal
-                searchTrigger.addEventListener('click', () => {
-                    searchModal.classList.remove('hidden');
-                    searchInput.focus();
-                });
-
-                // Close search modal
-                closeSearch.addEventListener('click', () => {
-                    searchModal.classList.add('hidden');
-                    searchInput.value = '';
-                    searchResults.innerHTML = '';
-                });
-
-                // Close on escape key
-                document.addEventListener('keydown', (e) => {
-                    if (e.key === 'Escape' && !searchModal.classList.contains('hidden')) {
-                        searchModal.classList.add('hidden');
-                        searchInput.value = '';
-                        searchResults.innerHTML = '';
-                    }
-                });
-
                 // Search functionality
                 searchInput.addEventListener('input', (e) => {
                     const query = e.target.value.toLowerCase();
+                    if (query.length < 2) {
+                        searchResults.innerHTML = '';
+                        return;
+                    }
+
                     const filteredGames = games.filter(game => 
                         game.title.toLowerCase().includes(query) || 
-                        game.categories.some(category => category.toLowerCase().includes(query))
+                        game.categories.some(cat => cat.toLowerCase().includes(query))
                     );
 
                     searchResults.innerHTML = filteredGames.map(game => `
-                        <a href="../../games/${game.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')}/" class="block p-4 hover:bg-gray-50">
-                            <div class="flex items-center">
-                                <div class="w-16 h-16 flex-shrink-0">
-                                    <img src="${game.image}" alt="${game.title} Thumbnail" class="w-full h-full object-cover rounded">
-                                </div>
-                                <div class="ml-4">
-                                    <h3 class="font-semibold text-gray-900">${game.title}</h3>
-                                    <p class="text-sm text-gray-500">${game.categories[0]}</p>
+                        <a href="../../games/${game.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}/" class="block p-4 hover:bg-gray-100 rounded-lg transition-colors">
+                            <div class="flex items-center gap-4">
+                                <img src="${game.image}" alt="${game.title} Thumbnail" class="w-16 h-9 object-cover rounded">
+                                <div>
+                                    <div class="font-medium">${game.title}</div>
+                                    <div class="text-sm text-gray-500">${game.categories[0]}</div>
                                 </div>
                             </div>
                         </a>
                     `).join('');
                 });
             });
+
+        // Open search modal
+        searchTrigger.addEventListener('click', () => {
+            searchModal.classList.remove('hidden');
+            searchInput.focus();
+        });
+
+        // Close search modal
+        closeSearch.addEventListener('click', () => {
+            searchModal.classList.add('hidden');
+            searchInput.value = '';
+            searchResults.innerHTML = '';
+        });
+
+        // Close on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !searchModal.classList.contains('hidden')) {
+                searchModal.classList.add('hidden');
+                searchInput.value = '';
+                searchResults.innerHTML = '';
+            }
+        });
     </script>
 </body>
 </html> 
