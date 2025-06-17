@@ -8,580 +8,110 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @keyframes gradient-animation {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        .animated-gradient {
-            background: linear-gradient(-45deg, #f0f9ff, #e0f2fe, #f0f9ff, #bae6fd);
-            background-size: 400% 400%;
-            animation: gradient-animation 15s ease infinite;
-        }
-        .gradient-text {
-            background-image: linear-gradient(to right, #0ea5e9, #2563eb, #4f46e5);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-    </style>
-</head>
-<body class="bg-gray-50">
-    <div id="search-modal" class="fixed inset-0 z-50 hidden bg-white/80 backdrop-blur-sm">
-        <div class="container mx-auto max-w-xl px-4 pt-20">
-            <input type="search" id="modal-search-input" placeholder="Search for games..." class="w-full text-2xl p-4 bg-transparent border-b-2 border-gray-300 focus:border-sky-500 outline-none">
-            <div id="search-results" class="mt-6 max-h-[60vh] overflow-y-auto"></div>
-            <button id="close-search" class="absolute top-6 right-6 p-2 text-gray-500 hover:text-gray-800 text-3xl font-light">×</button>
-        </div>
-    </div>
-
-    <header class="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/80 backdrop-blur-sm">
-        <div class="container mx-auto max-w-6xl px-4">
-            <div class="flex items-center justify-between py-4">
-                <a href="../../index.html" class="text-2xl font-bold text-gray-800">Free Games</a>
-                <div class="hidden md:flex space-x-6">
-                    <a href="../action/index.html" class="text-gray-600 hover:text-sky-500">Action 动作</a>
-                    <a href="../puzzle/index.html" class="text-gray-600 hover:text-sky-500">Puzzle 谜题</a>
-                    <a href="../racing/index.html" class="text-gray-600 hover:text-sky-500">Racing 竞速</a>
-                    <a href="../sports/index.html" class="text-gray-600 hover:text-sky-500">Sports 运动</a>
-                    <a href="../strategy/index.html" class="text-gray-600 hover:text-sky-500">Strategy 策略</a>
-                    <a href="../casual/index.html" class="text-gray-600 hover:text-sky-500">Casual 休闲</a>
-                    <a href="../io-games/index.html" class="text-gray-600 hover:text-sky-500">.io Games</a>
-                </div>
-                <button id="search-button" class="p-2 text-gray-500 hover:text-gray-800">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                    </svg>
-                </button>
-            </div>
-        </div>
-    </header>
-
-    <main>
-        <section class="animated-gradient py-20">
-            <div class="container mx-auto max-w-6xl px-4">
-                <h1 class="gradient-text text-5xl font-bold text-center mb-8">Racing Games</h1>
-                <p class="text-xl text-gray-600 text-center mb-12">Play free Racing games online. No download required!</p>
-            </div>
-        </section>
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
-                
-    <a href="/games/apocalypse-truck/" class="group block rounded-lg p-2 transition-all duration-300 hover:bg-gray-50">
-        <div class="aspect-w-16">
-            <img src="/assets/images/apocalypse-truck.jpg" alt="Apocalypse Truck Thumbnail" loading="lazy" class="rounded-lg shadow-sm transition-transform duration-300 ease-in-out group-hover:scale-105 object-cover" onerror="this.onerror=null; this.src='/assets/images/placeholder.jpg';">
-        </div>
-        <div class="mt-3">
-            <h3 class="font-semibold text-gray-800 group-hover:text-sky-500 truncate">Apocalypse Truck</h3>
-            <p class="text-sm text-gray-500">1-player</p>
-        </div>
-    </a>
-
-    <a href="/games/mini-cars-racing/" class="group block rounded-lg p-2 transition-all duration-300 hover:bg-gray-50">
-        <div class="aspect-w-16">
-            <img src="/assets/images/mini-cars-racing.jpg" alt="Mini Cars Racing Thumbnail" loading="lazy" class="rounded-lg shadow-sm transition-transform duration-300 ease-in-out group-hover:scale-105 object-cover" onerror="this.onerror=null; this.src='/assets/images/placeholder.jpg';">
-        </div>
-        <div class="mt-3">
-            <h3 class="font-semibold text-gray-800 group-hover:text-sky-500 truncate">Mini Cars Racing</h3>
-            <p class="text-sm text-gray-500">2-player</p>
-        </div>
-    </a>
-
-    <a href="/games/highway-traffic/" class="group block rounded-lg p-2 transition-all duration-300 hover:bg-gray-50">
-        <div class="aspect-w-16">
-            <img src="/assets/images/highway-traffic.jpg" alt="Highway Traffic Thumbnail" loading="lazy" class="rounded-lg shadow-sm transition-transform duration-300 ease-in-out group-hover:scale-105 object-cover" onerror="this.onerror=null; this.src='/assets/images/placeholder.jpg';">
-        </div>
-        <div class="mt-3">
-            <h3 class="font-semibold text-gray-800 group-hover:text-sky-500 truncate">Highway Traffic</h3>
-            <p class="text-sm text-gray-500">1-player</p>
-        </div>
-    </a>
-
-    <a href="/games/drift-hunters-pro/" class="group block rounded-lg p-2 transition-all duration-300 hover:bg-gray-50">
-        <div class="aspect-w-16">
-            <img src="/assets/images/drift-hunters-pro.jpg" alt="Drift Hunters Pro Thumbnail" loading="lazy" class="rounded-lg shadow-sm transition-transform duration-300 ease-in-out group-hover:scale-105 object-cover" onerror="this.onerror=null; this.src='/assets/images/placeholder.jpg';">
-        </div>
-        <div class="mt-3">
-            <h3 class="font-semibold text-gray-800 group-hover:text-sky-500 truncate">Drift Hunters Pro</h3>
-            <p class="text-sm text-gray-500">3d</p>
-        </div>
-    </a>
-
-    <a href="/games/pixel-driver/" class="group block rounded-lg p-2 transition-all duration-300 hover:bg-gray-50">
-        <div class="aspect-w-16">
-            <img src="/assets/images/pixel-driver.jpg" alt="Pixel Driver Thumbnail" loading="lazy" class="rounded-lg shadow-sm transition-transform duration-300 ease-in-out group-hover:scale-105 object-cover" onerror="this.onerror=null; this.src='/assets/images/placeholder.jpg';">
-        </div>
-        <div class="mt-3">
-            <h3 class="font-semibold text-gray-800 group-hover:text-sky-500 truncate">Pixel Driver</h3>
-            <p class="text-sm text-gray-500">1-player</p>
-        </div>
-    </a>
-
-    <a href="/games/burnout-city/" class="group block rounded-lg p-2 transition-all duration-300 hover:bg-gray-50">
-        <div class="aspect-w-16">
-            <img src="/assets/images/burnout-city.jpg" alt="Burnout City Thumbnail" loading="lazy" class="rounded-lg shadow-sm transition-transform duration-300 ease-in-out group-hover:scale-105 object-cover" onerror="this.onerror=null; this.src='/assets/images/placeholder.jpg';">
-        </div>
-        <div class="mt-3">
-            <h3 class="font-semibold text-gray-800 group-hover:text-sky-500 truncate">Burnout City</h3>
-            <p class="text-sm text-gray-500">1-player</p>
-        </div>
-    </a>
-
-    <a href="/games/monster-truck-race-arena/" class="group block rounded-lg p-2 transition-all duration-300 hover:bg-gray-50">
-        <div class="aspect-w-16">
-            <img src="/assets/images/monster-truck-race-arena.jpg" alt="Monster Truck Race Arena Thumbnail" loading="lazy" class="rounded-lg shadow-sm transition-transform duration-300 ease-in-out group-hover:scale-105 object-cover" onerror="this.onerror=null; this.src='/assets/images/placeholder.jpg';">
-        </div>
-        <div class="mt-3">
-            <h3 class="font-semibold text-gray-800 group-hover:text-sky-500 truncate">Monster Truck Race Arena</h3>
-            <p class="text-sm text-gray-500">1-player</p>
-        </div>
-    </a>
-
-    <a href="/games/edys-car-simulator/" class="group block rounded-lg p-2 transition-all duration-300 hover:bg-gray-50">
-        <div class="aspect-w-16">
-            <img src="/assets/images/edys-car-simulator.jpg" alt="Edys Car Simulator Thumbnail" loading="lazy" class="rounded-lg shadow-sm transition-transform duration-300 ease-in-out group-hover:scale-105 object-cover" onerror="this.onerror=null; this.src='/assets/images/placeholder.jpg';">
-        </div>
-        <div class="mt-3">
-            <h3 class="font-semibold text-gray-800 group-hover:text-sky-500 truncate">Edys Car Simulator</h3>
-            <p class="text-sm text-gray-500">1-player</p>
-        </div>
-    </a>
-
-    <a href="/games/super-car-driving/" class="group block rounded-lg p-2 transition-all duration-300 hover:bg-gray-50">
-        <div class="aspect-w-16">
-            <img src="/assets/images/super-car-driving.jpg" alt="Super Car Driving Thumbnail" loading="lazy" class="rounded-lg shadow-sm transition-transform duration-300 ease-in-out group-hover:scale-105 object-cover" onerror="this.onerror=null; this.src='/assets/images/placeholder.jpg';">
-        </div>
-        <div class="mt-3">
-            <h3 class="font-semibold text-gray-800 group-hover:text-sky-500 truncate">Super Car Driving</h3>
-            <p class="text-sm text-gray-500">1-player</p>
-        </div>
-    </a>
-
-    <a href="/games/mafia-getaway-cars/" class="group block rounded-lg p-2 transition-all duration-300 hover:bg-gray-50">
-        <div class="aspect-w-16">
-            <img src="/assets/images/mafia-getaway-cars.jpg" alt="Mafia Getaway Cars Thumbnail" loading="lazy" class="rounded-lg shadow-sm transition-transform duration-300 ease-in-out group-hover:scale-105 object-cover" onerror="this.onerror=null; this.src='/assets/images/placeholder.jpg';">
-        </div>
-        <div class="mt-3">
-            <h3 class="font-semibold text-gray-800 group-hover:text-sky-500 truncate">Mafia Getaway Cars</h3>
-            <p class="text-sm text-gray-500">1-player</p>
-        </div>
-    </a>
-
-    <a href="/games/highway-racer-pro/" class="group block rounded-lg p-2 transition-all duration-300 hover:bg-gray-50">
-        <div class="aspect-w-16">
-            <img src="/assets/images/highway-racer-pro.jpg" alt="Highway Racer Pro Thumbnail" loading="lazy" class="rounded-lg shadow-sm transition-transform duration-300 ease-in-out group-hover:scale-105 object-cover" onerror="this.onerror=null; this.src='/assets/images/placeholder.jpg';">
-        </div>
-        <div class="mt-3">
-            <h3 class="font-semibold text-gray-800 group-hover:text-sky-500 truncate">Highway Racer Pro</h3>
-            <p class="text-sm text-gray-500">3d</p>
-        </div>
-    </a>
-
-    <a href="/games/crazy-drifter/" class="group block rounded-lg p-2 transition-all duration-300 hover:bg-gray-50">
-        <div class="aspect-w-16">
-            <img src="/assets/images/crazy-drifter.jpg" alt="Crazy Drifter Thumbnail" loading="lazy" class="rounded-lg shadow-sm transition-transform duration-300 ease-in-out group-hover:scale-105 object-cover" onerror="this.onerror=null; this.src='/assets/images/placeholder.jpg';">
-        </div>
-        <div class="mt-3">
-            <h3 class="font-semibold text-gray-800 group-hover:text-sky-500 truncate">Crazy Drifter</h3>
-            <p class="text-sm text-gray-500">1-player</p>
-        </div>
-    </a>
-
-    <a href="/games/highway-cars/" class="group block rounded-lg p-2 transition-all duration-300 hover:bg-gray-50">
-        <div class="aspect-w-16">
-            <img src="/assets/images/highway-cars.jpg" alt="Highway Cars Thumbnail" loading="lazy" class="rounded-lg shadow-sm transition-transform duration-300 ease-in-out group-hover:scale-105 object-cover" onerror="this.onerror=null; this.src='/assets/images/placeholder.jpg';">
-        </div>
-        <div class="mt-3">
-            <h3 class="font-semibold text-gray-800 group-hover:text-sky-500 truncate">Highway Cars</h3>
-            <p class="text-sm text-gray-500">1-player</p>
-        </div>
-    </a>
-
-    <a href="/games/drift-fury/" class="group block rounded-lg p-2 transition-all duration-300 hover:bg-gray-50">
-        <div class="aspect-w-16">
-            <img src="/assets/images/drift-fury.jpg" alt="Drift Fury Thumbnail" loading="lazy" class="rounded-lg shadow-sm transition-transform duration-300 ease-in-out group-hover:scale-105 object-cover" onerror="this.onerror=null; this.src='/assets/images/placeholder.jpg';">
-        </div>
-        <div class="mt-3">
-            <h3 class="font-semibold text-gray-800 group-hover:text-sky-500 truncate">Drift Fury</h3>
-            <p class="text-sm text-gray-500">1-player</p>
-        </div>
-    </a>
-
-    <a href="/games/f1-drift-racer/" class="group block rounded-lg p-2 transition-all duration-300 hover:bg-gray-50">
-        <div class="aspect-w-16">
-            <img src="/assets/images/f1-drift-racer.jpg" alt="F1 Drift Racer Thumbnail" loading="lazy" class="rounded-lg shadow-sm transition-transform duration-300 ease-in-out group-hover:scale-105 object-cover" onerror="this.onerror=null; this.src='/assets/images/placeholder.jpg';">
-        </div>
-        <div class="mt-3">
-            <h3 class="font-semibold text-gray-800 group-hover:text-sky-500 truncate">F1 Drift Racer</h3>
-            <p class="text-sm text-gray-500">2d</p>
-        </div>
-    </a>
-
-    <a href="/games/police-traffic/" class="group block rounded-lg p-2 transition-all duration-300 hover:bg-gray-50">
-        <div class="aspect-w-16">
-            <img src="/assets/images/police-traffic.jpg" alt="Police Traffic Thumbnail" loading="lazy" class="rounded-lg shadow-sm transition-transform duration-300 ease-in-out group-hover:scale-105 object-cover" onerror="this.onerror=null; this.src='/assets/images/placeholder.jpg';">
-        </div>
-        <div class="mt-3">
-            <h3 class="font-semibold text-gray-800 group-hover:text-sky-500 truncate">Police Traffic</h3>
-            <p class="text-sm text-gray-500">1-player</p>
-        </div>
-    </a>
-
-    <a href="/games/super-mini-racing/" class="group block rounded-lg p-2 transition-all duration-300 hover:bg-gray-50">
-        <div class="aspect-w-16">
-            <img src="/assets/images/super-mini-racing.jpg" alt="Super Mini Racing Thumbnail" loading="lazy" class="rounded-lg shadow-sm transition-transform duration-300 ease-in-out group-hover:scale-105 object-cover" onerror="this.onerror=null; this.src='/assets/images/placeholder.jpg';">
-        </div>
-        <div class="mt-3">
-            <h3 class="font-semibold text-gray-800 group-hover:text-sky-500 truncate">Super Mini Racing</h3>
-            <p class="text-sm text-gray-500">2-player</p>
-        </div>
-    </a>
-
-    <a href="/games/supercars-drift/" class="group block rounded-lg p-2 transition-all duration-300 hover:bg-gray-50">
-        <div class="aspect-w-16">
-            <img src="/assets/images/supercars-drift.jpg" alt="Supercars Drift Thumbnail" loading="lazy" class="rounded-lg shadow-sm transition-transform duration-300 ease-in-out group-hover:scale-105 object-cover" onerror="this.onerror=null; this.src='/assets/images/placeholder.jpg';">
-        </div>
-        <div class="mt-3">
-            <h3 class="font-semibold text-gray-800 group-hover:text-sky-500 truncate">Supercars Drift</h3>
-            <p class="text-sm text-gray-500">1-player</p>
-        </div>
-    </a>
-
-    <a href="/games/crazy-car-arena/" class="group block rounded-lg p-2 transition-all duration-300 hover:bg-gray-50">
-        <div class="aspect-w-16">
-            <img src="/assets/images/crazy-car-arena.jpg" alt="Crazy Car Arena Thumbnail" loading="lazy" class="rounded-lg shadow-sm transition-transform duration-300 ease-in-out group-hover:scale-105 object-cover" onerror="this.onerror=null; this.src='/assets/images/placeholder.jpg';">
-        </div>
-        <div class="mt-3">
-            <h3 class="font-semibold text-gray-800 group-hover:text-sky-500 truncate">Crazy Car Arena</h3>
-            <p class="text-sm text-gray-500">3d</p>
-        </div>
-    </a>
-
-    <a href="/games/atv-highway-traffic/" class="group block rounded-lg p-2 transition-all duration-300 hover:bg-gray-50">
-        <div class="aspect-w-16">
-            <img src="/assets/images/atv-highway-traffic.jpg" alt="ATV Highway Traffic Thumbnail" loading="lazy" class="rounded-lg shadow-sm transition-transform duration-300 ease-in-out group-hover:scale-105 object-cover" onerror="this.onerror=null; this.src='/assets/images/placeholder.jpg';">
-        </div>
-        <div class="mt-3">
-            <h3 class="font-semibold text-gray-800 group-hover:text-sky-500 truncate">ATV Highway Traffic</h3>
-            <p class="text-sm text-gray-500">1-player</p>
-        </div>
-    </a>
-
-    <a href="/games/monster-truck-mountain-climb/" class="group block rounded-lg p-2 transition-all duration-300 hover:bg-gray-50">
-        <div class="aspect-w-16">
-            <img src="/assets/images/monster-truck-mountain-climb.jpg" alt="Monster Truck Mountain Climb Thumbnail" loading="lazy" class="rounded-lg shadow-sm transition-transform duration-300 ease-in-out group-hover:scale-105 object-cover" onerror="this.onerror=null; this.src='/assets/images/placeholder.jpg';">
-        </div>
-        <div class="mt-3">
-            <h3 class="font-semibold text-gray-800 group-hover:text-sky-500 truncate">Monster Truck Mountain Climb</h3>
-            <p class="text-sm text-gray-500">1-player</p>
-        </div>
-    </a>
-
-    <a href="/games/survival-karts/" class="group block rounded-lg p-2 transition-all duration-300 hover:bg-gray-50">
-        <div class="aspect-w-16">
-            <img src="/assets/images/survival-karts.jpg" alt="Survival Karts Thumbnail" loading="lazy" class="rounded-lg shadow-sm transition-transform duration-300 ease-in-out group-hover:scale-105 object-cover" onerror="this.onerror=null; this.src='/assets/images/placeholder.jpg';">
-        </div>
-        <div class="mt-3">
-            <h3 class="font-semibold text-gray-800 group-hover:text-sky-500 truncate">Survival Karts</h3>
-            <p class="text-sm text-gray-500">3d</p>
-        </div>
-    </a>
-
-    <a href="/games/2-player-crazy-racer/" class="group block rounded-lg p-2 transition-all duration-300 hover:bg-gray-50">
-        <div class="aspect-w-16">
-            <img src="/assets/images/2-player-crazy-racer.jpg" alt="2 Player Crazy Racer Thumbnail" loading="lazy" class="rounded-lg shadow-sm transition-transform duration-300 ease-in-out group-hover:scale-105 object-cover" onerror="this.onerror=null; this.src='/assets/images/placeholder.jpg';">
-        </div>
-        <div class="mt-3">
-            <h3 class="font-semibold text-gray-800 group-hover:text-sky-500 truncate">2 Player Crazy Racer</h3>
-            <p class="text-sm text-gray-500">2-player</p>
-        </div>
-    </a>
-
-    <a href="/games/airplane-racer/" class="group block rounded-lg p-2 transition-all duration-300 hover:bg-gray-50">
-        <div class="aspect-w-16">
-            <img src="/assets/images/airplane-racer.jpg" alt="Airplane Racer Thumbnail" loading="lazy" class="rounded-lg shadow-sm transition-transform duration-300 ease-in-out group-hover:scale-105 object-cover" onerror="this.onerror=null; this.src='/assets/images/placeholder.jpg';">
-        </div>
-        <div class="mt-3">
-            <h3 class="font-semibold text-gray-800 group-hover:text-sky-500 truncate">Airplane Racer</h3>
-            <p class="text-sm text-gray-500">2-player</p>
-        </div>
-    </a>
-
-    <a href="/games/highway-racer-2/" class="group block rounded-lg p-2 transition-all duration-300 hover:bg-gray-50">
-        <div class="aspect-w-16">
-            <img src="/assets/images/highway-racer-2.jpg" alt="Highway Racer 2 Thumbnail" loading="lazy" class="rounded-lg shadow-sm transition-transform duration-300 ease-in-out group-hover:scale-105 object-cover" onerror="this.onerror=null; this.src='/assets/images/placeholder.jpg';">
-        </div>
-        <div class="mt-3">
-            <h3 class="font-semibold text-gray-800 group-hover:text-sky-500 truncate">Highway Racer 2</h3>
-            <p class="text-sm text-gray-500">3d</p>
-        </div>
-    </a>
-
-    <a href="/games/crazy-moto-racing/" class="group block rounded-lg p-2 transition-all duration-300 hover:bg-gray-50">
-        <div class="aspect-w-16">
-            <img src="/assets/images/crazy-moto-racing.jpg" alt="Crazy Moto Racing Thumbnail" loading="lazy" class="rounded-lg shadow-sm transition-transform duration-300 ease-in-out group-hover:scale-105 object-cover" onerror="this.onerror=null; this.src='/assets/images/placeholder.jpg';">
-        </div>
-        <div class="mt-3">
-            <h3 class="font-semibold text-gray-800 group-hover:text-sky-500 truncate">Crazy Moto Racing</h3>
-            <p class="text-sm text-gray-500">1-player</p>
-        </div>
-    </a>
-
-    <a href="/games/speed-drift-racing/" class="group block rounded-lg p-2 transition-all duration-300 hover:bg-gray-50">
-        <div class="aspect-w-16">
-            <img src="/assets/images/speed-drift-racing.jpg" alt="Speed Drift Racing Thumbnail" loading="lazy" class="rounded-lg shadow-sm transition-transform duration-300 ease-in-out group-hover:scale-105 object-cover" onerror="this.onerror=null; this.src='/assets/images/placeholder.jpg';">
-        </div>
-        <div class="mt-3">
-            <h3 class="font-semibold text-gray-800 group-hover:text-sky-500 truncate">Speed Drift Racing</h3>
-            <p class="text-sm text-gray-500">2d</p>
-        </div>
-    </a>
-
-    <a href="/games/offroad-rally/" class="group block rounded-lg p-2 transition-all duration-300 hover:bg-gray-50">
-        <div class="aspect-w-16">
-            <img src="/assets/images/offroad-rally.jpg" alt="Offroad Rally Thumbnail" loading="lazy" class="rounded-lg shadow-sm transition-transform duration-300 ease-in-out group-hover:scale-105 object-cover" onerror="this.onerror=null; this.src='/assets/images/placeholder.jpg';">
-        </div>
-        <div class="mt-3">
-            <h3 class="font-semibold text-gray-800 group-hover:text-sky-500 truncate">Offroad Rally</h3>
-            <p class="text-sm text-gray-500">3d</p>
-        </div>
-    </a>
-
-    <a href="/games/monster-truck-booster/" class="group block rounded-lg p-2 transition-all duration-300 hover:bg-gray-50">
-        <div class="aspect-w-16">
-            <img src="/assets/images/monster-truck-booster.jpg" alt="Monster Truck Booster Thumbnail" loading="lazy" class="rounded-lg shadow-sm transition-transform duration-300 ease-in-out group-hover:scale-105 object-cover" onerror="this.onerror=null; this.src='/assets/images/placeholder.jpg';">
-        </div>
-        <div class="mt-3">
-            <h3 class="font-semibold text-gray-800 group-hover:text-sky-500 truncate">Monster Truck Booster</h3>
-            <p class="text-sm text-gray-500">1-player</p>
-        </div>
-    </a>
-
-    <a href="/games/shortcut-race/" class="group block rounded-lg p-2 transition-all duration-300 hover:bg-gray-50">
-        <div class="aspect-w-16">
-            <img src="/assets/images/shortcut-race.jpg" alt="Shortcut Race Thumbnail" loading="lazy" class="rounded-lg shadow-sm transition-transform duration-300 ease-in-out group-hover:scale-105 object-cover" onerror="this.onerror=null; this.src='/assets/images/placeholder.jpg';">
-        </div>
-        <div class="mt-3">
-            <h3 class="font-semibold text-gray-800 group-hover:text-sky-500 truncate">Shortcut Race</h3>
-            <p class="text-sm text-gray-500">1-player</p>
-        </div>
-    </a>
-
-    <a href="/games/jeep-racing/" class="group block rounded-lg p-2 transition-all duration-300 hover:bg-gray-50">
-        <div class="aspect-w-16">
-            <img src="/assets/images/jeep-racing.jpg" alt="Jeep Racing Thumbnail" loading="lazy" class="rounded-lg shadow-sm transition-transform duration-300 ease-in-out group-hover:scale-105 object-cover" onerror="this.onerror=null; this.src='/assets/images/placeholder.jpg';">
-        </div>
-        <div class="mt-3">
-            <h3 class="font-semibold text-gray-800 group-hover:text-sky-500 truncate">Jeep Racing</h3>
-            <p class="text-sm text-gray-500">2d</p>
-        </div>
-    </a>
-
-    <a href="/games/formula-1-driver/" class="group block rounded-lg p-2 transition-all duration-300 hover:bg-gray-50">
-        <div class="aspect-w-16">
-            <img src="/assets/images/formula-1-driver.jpg" alt="Formula 1 Driver Thumbnail" loading="lazy" class="rounded-lg shadow-sm transition-transform duration-300 ease-in-out group-hover:scale-105 object-cover" onerror="this.onerror=null; this.src='/assets/images/placeholder.jpg';">
-        </div>
-        <div class="mt-3">
-            <h3 class="font-semibold text-gray-800 group-hover:text-sky-500 truncate">Formula 1 Driver</h3>
-            <p class="text-sm text-gray-500">2d</p>
-        </div>
-    </a>
-
-    <a href="/games/powerslide-kart-simulator/" class="group block rounded-lg p-2 transition-all duration-300 hover:bg-gray-50">
-        <div class="aspect-w-16">
-            <img src="/assets/images/powerslide-kart-simulator.jpg" alt="Powerslide Kart Simulator Thumbnail" loading="lazy" class="rounded-lg shadow-sm transition-transform duration-300 ease-in-out group-hover:scale-105 object-cover" onerror="this.onerror=null; this.src='/assets/images/placeholder.jpg';">
-        </div>
-        <div class="mt-3">
-            <h3 class="font-semibold text-gray-800 group-hover:text-sky-500 truncate">Powerslide Kart Simulator</h3>
-            <p class="text-sm text-gray-500">1-player</p>
-        </div>
-    </a>
-
-    <a href="/games/hover-racer-pro/" class="group block rounded-lg p-2 transition-all duration-300 hover:bg-gray-50">
-        <div class="aspect-w-16">
-            <img src="/assets/images/hover-racer-pro.jpg" alt="Hover Racer Pro Thumbnail" loading="lazy" class="rounded-lg shadow-sm transition-transform duration-300 ease-in-out group-hover:scale-105 object-cover" onerror="this.onerror=null; this.src='/assets/images/placeholder.jpg';">
-        </div>
-        <div class="mt-3">
-            <h3 class="font-semibold text-gray-800 group-hover:text-sky-500 truncate">Hover Racer Pro</h3>
-            <p class="text-sm text-gray-500">1-player</p>
-        </div>
-    </a>
-
-    <a href="/games/racing-cars/" class="group block rounded-lg p-2 transition-all duration-300 hover:bg-gray-50">
-        <div class="aspect-w-16">
-            <img src="/assets/images/racing-cars.jpg" alt="Racing Cars Thumbnail" loading="lazy" class="rounded-lg shadow-sm transition-transform duration-300 ease-in-out group-hover:scale-105 object-cover" onerror="this.onerror=null; this.src='/assets/images/placeholder.jpg';">
-        </div>
-        <div class="mt-3">
-            <h3 class="font-semibold text-gray-800 group-hover:text-sky-500 truncate">Racing Cars</h3>
-            <p class="text-sm text-gray-500">2d</p>
-        </div>
-    </a>
-
-    <a href="/games/racing-cars-2/" class="group block rounded-lg p-2 transition-all duration-300 hover:bg-gray-50">
-        <div class="aspect-w-16">
-            <img src="/assets/images/racing-cars-2.jpg" alt="Racing Cars 2 Thumbnail" loading="lazy" class="rounded-lg shadow-sm transition-transform duration-300 ease-in-out group-hover:scale-105 object-cover" onerror="this.onerror=null; this.src='/assets/images/placeholder.jpg';">
-        </div>
-        <div class="mt-3">
-            <h3 class="font-semibold text-gray-800 group-hover:text-sky-500 truncate">Racing Cars 2</h3>
-            <p class="text-sm text-gray-500">1-player</p>
-        </div>
-    </a>
-
-    <a href="/games/train-racing/" class="group block rounded-lg p-2 transition-all duration-300 hover:bg-gray-50">
-        <div class="aspect-w-16">
-            <img src="/assets/images/train-racing.jpg" alt="Train Racing Thumbnail" loading="lazy" class="rounded-lg shadow-sm transition-transform duration-300 ease-in-out group-hover:scale-105 object-cover" onerror="this.onerror=null; this.src='/assets/images/placeholder.jpg';">
-        </div>
-        <div class="mt-3">
-            <h3 class="font-semibold text-gray-800 group-hover:text-sky-500 truncate">Train Racing</h3>
-            <p class="text-sm text-gray-500">2d</p>
-        </div>
-    </a>
-
-    <a href="/games/crazy-hill-climb/" class="group block rounded-lg p-2 transition-all duration-300 hover:bg-gray-50">
-        <div class="aspect-w-16">
-            <img src="/assets/images/crazy-hill-climb.jpg" alt="Crazy Hill Climb Thumbnail" loading="lazy" class="rounded-lg shadow-sm transition-transform duration-300 ease-in-out group-hover:scale-105 object-cover" onerror="this.onerror=null; this.src='/assets/images/placeholder.jpg';">
-        </div>
-        <div class="mt-3">
-            <h3 class="font-semibold text-gray-800 group-hover:text-sky-500 truncate">Crazy Hill Climb</h3>
-            <p class="text-sm text-gray-500">2d</p>
-        </div>
-    </a>
-
-    <a href="/games/hill-climb-cars/" class="group block rounded-lg p-2 transition-all duration-300 hover:bg-gray-50">
-        <div class="aspect-w-16">
-            <img src="/assets/images/hill-climb-cars.jpg" alt="Hill Climb Cars Thumbnail" loading="lazy" class="rounded-lg shadow-sm transition-transform duration-300 ease-in-out group-hover:scale-105 object-cover" onerror="this.onerror=null; this.src='/assets/images/placeholder.jpg';">
-        </div>
-        <div class="mt-3">
-            <h3 class="font-semibold text-gray-800 group-hover:text-sky-500 truncate">Hill Climb Cars</h3>
-            <p class="text-sm text-gray-500">1-player</p>
-        </div>
-    </a>
-
-    <a href="/games/hover-racer/" class="group block rounded-lg p-2 transition-all duration-300 hover:bg-gray-50">
-        <div class="aspect-w-16">
-            <img src="/assets/images/hover-racer.jpg" alt="Hover Racer Thumbnail" loading="lazy" class="rounded-lg shadow-sm transition-transform duration-300 ease-in-out group-hover:scale-105 object-cover" onerror="this.onerror=null; this.src='/assets/images/placeholder.jpg';">
-        </div>
-        <div class="mt-3">
-            <h3 class="font-semibold text-gray-800 group-hover:text-sky-500 truncate">Hover Racer</h3>
-            <p class="text-sm text-gray-500">3d</p>
-        </div>
-    </a>
-
-    <a href="/games/skateboard-marathon/" class="group block rounded-lg p-2 transition-all duration-300 hover:bg-gray-50">
-        <div class="aspect-w-16">
-            <img src="/assets/images/skateboard-marathon.jpg" alt="Skateboard Marathon Thumbnail" loading="lazy" class="rounded-lg shadow-sm transition-transform duration-300 ease-in-out group-hover:scale-105 object-cover" onerror="this.onerror=null; this.src='/assets/images/placeholder.jpg';">
-        </div>
-        <div class="mt-3">
-            <h3 class="font-semibold text-gray-800 group-hover:text-sky-500 truncate">Skateboard Marathon</h3>
-            <p class="text-sm text-gray-500">3d</p>
-        </div>
-    </a>
-
-    <a href="/games/tank-racing/" class="group block rounded-lg p-2 transition-all duration-300 hover:bg-gray-50">
-        <div class="aspect-w-16">
-            <img src="/assets/images/tank-racing.jpg" alt="Tank Racing Thumbnail" loading="lazy" class="rounded-lg shadow-sm transition-transform duration-300 ease-in-out group-hover:scale-105 object-cover" onerror="this.onerror=null; this.src='/assets/images/placeholder.jpg';">
-        </div>
-        <div class="mt-3">
-            <h3 class="font-semibold text-gray-800 group-hover:text-sky-500 truncate">Tank Racing</h3>
-            <p class="text-sm text-gray-500">2d</p>
-        </div>
-    </a>
-
-    <a href="/games/monster-truck-racing/" class="group block rounded-lg p-2 transition-all duration-300 hover:bg-gray-50">
-        <div class="aspect-w-16">
-            <img src="/assets/images/monster-truck-racing.jpg" alt="Monster Truck Racing Thumbnail" loading="lazy" class="rounded-lg shadow-sm transition-transform duration-300 ease-in-out group-hover:scale-105 object-cover" onerror="this.onerror=null; this.src='/assets/images/placeholder.jpg';">
-        </div>
-        <div class="mt-3">
-            <h3 class="font-semibold text-gray-800 group-hover:text-sky-500 truncate">Monster Truck Racing</h3>
-            <p class="text-sm text-gray-500">1-player</p>
-        </div>
-    </a>
-
-    <a href="/games/truck-racing/" class="group block rounded-lg p-2 transition-all duration-300 hover:bg-gray-50">
-        <div class="aspect-w-16">
-            <img src="/assets/images/truck-racing.jpg" alt="Truck Racing Thumbnail" loading="lazy" class="rounded-lg shadow-sm transition-transform duration-300 ease-in-out group-hover:scale-105 object-cover" onerror="this.onerror=null; this.src='/assets/images/placeholder.jpg';">
-        </div>
-        <div class="mt-3">
-            <h3 class="font-semibold text-gray-800 group-hover:text-sky-500 truncate">Truck Racing</h3>
-            <p class="text-sm text-gray-500">1-player</p>
-        </div>
-    </a>
-            </div>
-        </div>
-    </main>
-
-    <footer class="bg-white border-t border-gray-200 mt-12">
-        <div class="container mx-auto max-w-6xl px-4 py-8">
-            <p class="text-center text-gray-600">© 2024 Free Games. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script>
-        // Search functionality
+    
+<script>
+    (function() {
+        // --- DOM Element Selection ---
+        const searchTrigger = document.getElementById('search-trigger');
         const searchModal = document.getElementById('search-modal');
-        const searchTrigger = document.getElementById('search-button');
         const closeSearch = document.getElementById('close-search');
-        const searchInput = document.getElementById('modal-search-input');
-        const searchResults = document.getElementById('search-results');
+        const modalInput = document.getElementById('modal-search-input');
+        const searchResultsContainer = document.getElementById('search-results');
 
-        // Game data
-        fetch('../../games.json')
-            .then(response => response.json())
-            .then(games => {
-                // Search functionality
-                searchInput.addEventListener('input', (e) => {
-                    const query = e.target.value.toLowerCase();
-                    if (query.length < 2) {
-                        searchResults.innerHTML = '';
-                        return;
-                    }
+        // --- State Management ---
+        let allGames = []; // This will cache the game data
+        let isFetching = false;
+        let hasFetched = false;
 
-                    const filteredGames = games.filter(game => 
-                        game.title.toLowerCase().includes(query) || 
-                        game.categories.some(cat => cat.toLowerCase().includes(query))
-                    );
+        // --- Core Functions ---
 
-                    searchResults.innerHTML = filteredGames.map(game => `
-                        <a href="../../games/${game.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}/" class="block p-4 hover:bg-gray-100 rounded-lg transition-colors">
-                            <div class="flex items-center gap-4">
-                                <img src="${game.image}" alt="${game.title} Thumbnail" class="w-16 h-9 object-cover rounded">
-                                <div>
-                                    <div class="font-medium">${game.title}</div>
-                                    <div class="text-sm text-gray-500">${game.categories[0]}</div>
-                                </div>
-                            </div>
-                        </a>
-                    `).join('');
-                });
-            });
+        // Function to fetch and prepare game data ONCE
+        async function fetchGames() {
+            if (hasFetched || isFetching) return;
+            isFetching = true;
+            try {
+                const response = await fetch('https://www.onlinegames.io/media/plugins/genGames/embed.json');
+                const data = await response.json();
+                allGames = data.map(game => ({
+                    name: game.name,
+                    slug: (game.name || '').toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+                    thumb: 'https://www.onlinegames.io' + (game.thumb || '')
+                }));
+                hasFetched = true;
+            } catch (error) {
+                console.error('Failed to fetch game data:', error);
+                searchResultsContainer.innerHTML = '<p class="text-red-500 p-4">Could not load game data.</p>';
+            } finally {
+                isFetching = false;
+            }
+        }
 
-        // Open search modal
-        searchTrigger.addEventListener('click', () => {
+        // Function to show the search modal
+        function showModal() {
+            if (!searchModal) return;
             searchModal.classList.remove('hidden');
-            searchInput.focus();
-        });
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            modalInput.focus();
+            fetchGames(); // Fetch data only when the user opens search for the first time
+        }
 
-        // Close search modal
-        closeSearch.addEventListener('click', () => {
+        // Function to hide the search modal
+        function hideModal() {
+            if (!searchModal) return;
             searchModal.classList.add('hidden');
-            searchInput.value = '';
-            searchResults.innerHTML = '';
-        });
+            document.body.style.overflow = ''; // Restore scrolling
+            modalInput.value = '';
+            searchResultsContainer.innerHTML = '';
+        }
 
-        // Close on escape key
+        // Function to perform search and display results
+        function performSearch() {
+            const searchTerm = modalInput.value.toLowerCase().trim();
+            
+            if (searchTerm.length < 2) {
+                searchResultsContainer.innerHTML = '';
+                return;
+            }
+
+            const results = allGames.filter(game => game.name.toLowerCase().includes(searchTerm));
+            
+            if (results.length === 0) {
+                searchResultsContainer.innerHTML = '<p class="text-gray-500 p-4">No games found for "' + searchTerm + '".</p>';
+                return;
+            }
+
+            searchResultsContainer.innerHTML = results.map(game => `
+                <a href="/games/${game.slug}/" class="flex items-center p-3 rounded-lg hover:bg-gray-100 transition-colors">
+                    <img src="${game.thumb}" alt="${game.name}" class="w-16 h-12 rounded-md object-cover mr-4 flex-shrink-0">
+                    <span class="font-semibold text-gray-800">${game.name}</span>
+                </a>
+            `).join('');
+        }
+
+        // --- Event Listeners ---
+        if (searchTrigger) {
+            searchTrigger.addEventListener('click', showModal);
+        }
+        if (closeSearch) {
+            closeSearch.addEventListener('click', hideModal);
+        }
+        if (modalInput) {
+            // Use 'keyup' for a more responsive feel after typing stops
+            let debounceTimer;
+            modalInput.addEventListener('keyup', () => {
+                clearTimeout(debounceTimer);
+                debounceTimer = setTimeout(performSearch, 250); // Debounce for 250ms
+            });
+        }
+        
+        // Close with Escape key
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && !searchModal.classList.contains('hidden')) {
-                searchModal.classList.add('hidden');
-                searchInput.value = '';
-                searchResults.innerHTML = '';
+            if (e.key === 'Escape' && searchModal && !searchModal.classList.contains('hidden')) {
+                hideModal();
             }
         });
-    </script>
+
+    })();
+</script>
 </body>
 </html> 

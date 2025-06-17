@@ -11,7 +11,13 @@ Start with their makeup, dress them up and put nail polish on them.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style type="text/css">
-        body { font-family: 'Inter', sans-serif; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/assets/images/backgrounds/home.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
         .game-container {
             position: relative;
             width: 100%;
@@ -73,5 +79,109 @@ Start with their makeup, dress them up and put nail polish on them.</p>
             <p class="text-center text-gray-600">© 2024 Free Games. All rights reserved.</p>
         </div>
     </footer>
+<script>
+    (function() {
+        // --- DOM Element Selection ---
+        const searchTrigger = document.getElementById('search-trigger');
+        const searchModal = document.getElementById('search-modal');
+        const closeSearch = document.getElementById('close-search');
+        const modalInput = document.getElementById('modal-search-input');
+        const searchResultsContainer = document.getElementById('search-results');
+
+        // --- State Management ---
+        let allGames = []; // This will cache the game data
+        let isFetching = false;
+        let hasFetched = false;
+
+        // --- Core Functions ---
+
+        // Function to fetch and prepare game data ONCE
+        async function fetchGames() {
+            if (hasFetched || isFetching) return;
+            isFetching = true;
+            try {
+                const response = await fetch('https://www.onlinegames.io/media/plugins/genGames/embed.json');
+                const data = await response.json();
+                allGames = data.map(game => ({
+                    name: game.name,
+                    slug: (game.name || '').toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, ''),
+                    thumb: 'https://www.onlinegames.io' + (game.thumb || '')
+                }));
+                hasFetched = true;
+            } catch (error) {
+                console.error('Failed to fetch game data:', error);
+                searchResultsContainer.innerHTML = '<p class="text-red-500 p-4">Could not load game data.</p>';
+            } finally {
+                isFetching = false;
+            }
+        }
+
+        // Function to show the search modal
+        function showModal() {
+            if (!searchModal) return;
+            searchModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            modalInput.focus();
+            fetchGames(); // Fetch data only when the user opens search for the first time
+        }
+
+        // Function to hide the search modal
+        function hideModal() {
+            if (!searchModal) return;
+            searchModal.classList.add('hidden');
+            document.body.style.overflow = ''; // Restore scrolling
+            modalInput.value = '';
+            searchResultsContainer.innerHTML = '';
+        }
+
+        // Function to perform search and display results
+        function performSearch() {
+            const searchTerm = modalInput.value.toLowerCase().trim();
+            
+            if (searchTerm.length < 2) {
+                searchResultsContainer.innerHTML = '';
+                return;
+            }
+
+            const results = allGames.filter(game => game.name.toLowerCase().includes(searchTerm));
+            
+            if (results.length === 0) {
+                searchResultsContainer.innerHTML = '<p class="text-gray-500 p-4">No games found for "' + searchTerm + '".</p>';
+                return;
+            }
+
+            searchResultsContainer.innerHTML = results.map(game => `
+                <a href="/games/${game.slug}/" class="flex items-center p-3 rounded-lg hover:bg-gray-100 transition-colors">
+                    <img src="${game.thumb}" alt="${game.name}" class="w-16 h-12 rounded-md object-cover mr-4 flex-shrink-0">
+                    <span class="font-semibold text-gray-800">${game.name}</span>
+                </a>
+            `).join('');
+        }
+
+        // --- Event Listeners ---
+        if (searchTrigger) {
+            searchTrigger.addEventListener('click', showModal);
+        }
+        if (closeSearch) {
+            closeSearch.addEventListener('click', hideModal);
+        }
+        if (modalInput) {
+            // Use 'keyup' for a more responsive feel after typing stops
+            let debounceTimer;
+            modalInput.addEventListener('keyup', () => {
+                clearTimeout(debounceTimer);
+                debounceTimer = setTimeout(performSearch, 250); // Debounce for 250ms
+            });
+        }
+        
+        // Close with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && searchModal && !searchModal.classList.contains('hidden')) {
+                hideModal();
+            }
+        });
+
+    })();
+</script>
 </body>
 </html> 
