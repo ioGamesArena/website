@@ -42,25 +42,27 @@ function updateSingleCard(card, index) {
 }
 
 function updateImageAttributes(img, index) {
-    // 保存原始src到data-src（如果还没有的话）
-    if (img.src && !img.dataset.src && !img.src.startsWith('data:')) {
-        img.dataset.src = img.src;
+    // 确保有正确的data-src设置
+    if (!img.dataset.src) {
+        if (img.src && !img.src.startsWith('data:')) {
+            img.dataset.src = img.src;
+        }
     }
-    
+
     // 添加必要的类
     img.classList.add('responsive-image');
-    if (!img.classList.contains('loading')) {
+    if (!img.classList.contains('loading') && !img.classList.contains('loaded')) {
         img.classList.add('loading');
     }
-    
+
     // 设置优先级（前8个图片为高优先级）
     if (index < 8) {
         img.dataset.priority = 'high';
     }
-    
+
     // 添加懒加载属性
     img.loading = 'lazy';
-    
+
     // 确保有alt属性
     if (!img.alt) {
         const gameTitle = extractGameTitle(img);

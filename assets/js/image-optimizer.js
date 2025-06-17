@@ -75,7 +75,8 @@ class ImageOptimizer {
     }
     
     processExistingImages() {
-        const images = document.querySelectorAll('img[data-src], img[src*="onlinegames.io"]');
+        // 处理所有游戏相关的图片
+        const images = document.querySelectorAll('img[data-src], img[src*="onlinegames.io"], .game-card img');
         images.forEach(img => this.processImage(img));
     }
     
@@ -127,15 +128,22 @@ class ImageOptimizer {
             this.loadImage(img);
             return;
         }
-        
-        // 保存原始src到data-src
-        if (img.src && !img.dataset.src && !img.src.startsWith('data:')) {
-            img.dataset.src = img.src;
-            if (this.options.showPlaceholder) {
-                img.src = this.options.placeholder;
+
+        // 确保有正确的data-src
+        if (!img.dataset.src) {
+            if (img.src && !img.src.startsWith('data:')) {
+                img.dataset.src = img.src;
             }
         }
-        
+
+        // 如果有data-src但没有设置占位符，设置占位符
+        if (img.dataset.src && this.options.showPlaceholder) {
+            if (!img.src || img.src === img.dataset.src) {
+                img.src = this.options.placeholder;
+                img.style.opacity = '0.7';
+            }
+        }
+
         this.observer.observe(img);
     }
     
