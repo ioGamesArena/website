@@ -3,16 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{game_name} - Play Free Online Games</title>
-    <meta name="description" content="Play {game_name} online for free. No download required!">
+    <title>{title} - Free Online Games</title>
+    <meta name="description" content="{description}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
+    <style type="text/css">
+        body {{ font-family: 'Inter', sans-serif; }}
+        .game-container {{
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            background: #000;
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }}
+        .game-frame {{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }}
     </style>
 </head>
 <body class="bg-gray-50">
@@ -22,14 +36,13 @@
                 <span class="text-xl font-bold tracking-tight">FreeGames</span>
             </a>
             <nav class="hidden items-center space-x-6 text-sm font-medium md:flex">
-                <a href="/categories/action/" class="transition-colors hover:text-sky-500">Action</a>
-                <a href="/categories/adventure/" class="transition-colors hover:text-sky-500">Adventure</a>
-                <a href="/categories/puzzle/" class="transition-colors hover:text-sky-500">Puzzle</a>
-                <a href="/categories/racing/" class="transition-colors hover:text-sky-500">Racing</a>
-                <a href="/categories/sports/" class="transition-colors hover:text-sky-500">Sports</a>
-                <a href="/categories/strategy/" class="transition-colors hover:text-sky-500">Strategy</a>
+                <a href="/categories/action/" class="transition-colors hover:text-sky-500">Action 动作</a>
+                <a href="/categories/puzzle/" class="transition-colors hover:text-sky-500">Puzzle 谜题</a>
+                <a href="/categories/racing/" class="transition-colors hover:text-sky-500">Racing 竞速</a>
+                <a href="/categories/sports/" class="transition-colors hover:text-sky-500">Sports 运动</a>
+                <a href="/categories/strategy/" class="transition-colors hover:text-sky-500">Strategy 策略</a>
+                <a href="/categories/casual/" class="transition-colors hover:text-sky-500">Casual 休闲</a>
                 <a href="/categories/io-games/" class="transition-colors hover:text-sky-500">.io Games</a>
-                <a href="/categories/casual/" class="transition-colors hover:text-sky-500">Casual</a>
             </nav>
             <div class="flex items-center space-x-4">
                 <!-- Search button will be added here -->
@@ -38,16 +51,17 @@
     </header>
 
     <main>
-        <div class="container mx-auto max-w-7xl px-4 py-8">
-            <h1 class="text-4xl font-bold text-gray-900">{game_name}</h1>
-            <div class="mt-8 aspect-video w-full rounded-lg bg-gray-100">
-                <!-- Game iframe will be inserted here -->
+        <section class="text-center py-12">
+            <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900">{title}</h1>
+            <p class="mt-4 text-xl text-gray-600">{description}</p>
+        </section>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="game-container mb-8">
+                <iframe class="game-frame" src="{embed_url}" allowfullscreen></iframe>
             </div>
-            <div class="mt-8">
-                <h2 class="text-2xl font-bold text-gray-900">How to Play</h2>
-                <p class="mt-4 text-gray-600">
-                    <!-- Game instructions will be inserted here -->
-                </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">
+                {game_cards}
             </div>
         </div>
     </main>
