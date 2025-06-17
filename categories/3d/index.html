@@ -11,40 +11,29 @@
         body {
             font-family: 'Inter', sans-serif;
             background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
+            min-height: 100vh;
         }
         .game-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 2rem;
             padding: 2rem;
         }
-        .game-card {
-            height: 100%;
-            transition: transform 0.3s ease;
-        }
-        .game-card:hover {
-            transform: translateY(-5px);
-        }
-        .gradient-text {
-            background: linear-gradient(45deg, #2563eb, #3b82f6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
     </style>
 </head>
-<body>
-    <header class="bg-white shadow-sm">
+<body class="bg-gradient-to-br from-sky-50 to-gray-50">
+    <header class="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/80 backdrop-blur-sm">
         <nav class="container mx-auto px-4 py-4">
             <div class="flex items-center justify-between">
-                <a href="/" class="text-2xl font-bold text-gray-800">Free Games</a>
+                <a href="../../" class="text-2xl font-bold text-gray-800">Free Games</a>
                 <div class="flex space-x-6">
-                    <a href="/categories/action/" class="text-gray-600 hover:text-blue-600">Action 动作</a>
-                    <a href="/categories/puzzle/" class="text-gray-600 hover:text-blue-600">Puzzle 谜题</a>
-                    <a href="/categories/racing/" class="text-gray-600 hover:text-blue-600">Racing 竞速</a>
-                    <a href="/categories/sports/" class="text-gray-600 hover:text-blue-600">Sports 运动</a>
-                    <a href="/categories/strategy/" class="text-gray-600 hover:text-blue-600">Strategy 策略</a>
-                    <a href="/categories/casual/" class="text-gray-600 hover:text-blue-600">Casual 休闲</a>
-                    <a href="/categories/io-games/" class="text-gray-600 hover:text-blue-600">.io Games</a>
+                    <a href="../../categories/action/" class="text-gray-600 hover:text-blue-600">Action</a>
+                    <a href="../../categories/puzzle/" class="text-gray-600 hover:text-blue-600">Puzzle</a>
+                    <a href="../../categories/racing/" class="text-gray-600 hover:text-blue-600">Racing</a>
+                    <a href="../../categories/sports/" class="text-gray-600 hover:text-blue-600">Sports</a>
+                    <a href="../../categories/strategy/" class="text-gray-600 hover:text-blue-600">Strategy</a>
+                    <a href="../../categories/casual/" class="text-gray-600 hover:text-blue-600">Casual</a>
+                    <a href="../../categories/io-games/" class="text-gray-600 hover:text-blue-600">.io Games</a>
                 </div>
                 <button class="p-2 hover:bg-gray-100 rounded-full">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -57,507 +46,425 @@
 
     <main class="container mx-auto px-4 py-8">
         <div class="text-center mb-12">
-            <h1 class="text-4xl font-bold mb-4 gradient-text">3D Games</h1>
+            <h1 class="text-4xl font-bold mb-4 bg-gradient-to-r from-sky-600 to-blue-600 bg-clip-text text-transparent">3D Games</h1>
             <p class="text-gray-600 max-w-2xl mx-auto">Play the best free 3D games online. No download required!</p>
         </div>
 
         <div class="game-grid">
             
-    <div class="game-card">
-        <a href="../../games/drift-king/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/729/responsive/Drift-King-xs.jpg" alt="Drift King Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Drift King</h3>
-                <p class="text-sm text-gray-600">3D</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/drift-king/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/729/responsive/Drift-King-xs.jpg" alt="Drift King Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Drift King</h3>
+            <p class="text-sm text-gray-500">3D</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/masked-special-forces/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/310/responsive/Masked-Special-Forces-FPS-xs.jpg" alt="Masked Special Forces Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Masked Special Forces</h3>
-                <p class="text-sm text-gray-600">3D</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/masked-special-forces/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/310/responsive/Masked-Special-Forces-FPS-xs.jpg" alt="Masked Special Forces Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Masked Special Forces</h3>
+            <p class="text-sm text-gray-500">3D</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/madalin-stunt-cars-pro/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/401/responsive/Madalin-Stunt-Cars-Pro-Game-xs.jpg" alt="Madalin Stunt Cars Pro Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Madalin Stunt Cars Pro</h3>
-                <p class="text-sm text-gray-600">3D</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/madalin-stunt-cars-pro/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/401/responsive/Madalin-Stunt-Cars-Pro-Game-xs.jpg" alt="Madalin Stunt Cars Pro Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Madalin Stunt Cars Pro</h3>
+            <p class="text-sm text-gray-500">3D</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/drift-hunters-pro/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/397/responsive/Drift-Hunters-Pro-xs.jpg" alt="Drift Hunters Pro Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Drift Hunters Pro</h3>
-                <p class="text-sm text-gray-600">3D</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/drift-hunters-pro/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/397/responsive/Drift-Hunters-Pro-xs.jpg" alt="Drift Hunters Pro Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Drift Hunters Pro</h3>
+            <p class="text-sm text-gray-500">3D</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/warstrike/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/870/responsive/WarStrike-Online-xs.jpg" alt="WarStrike Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">WarStrike</h3>
-                <p class="text-sm text-gray-600">3D</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/warstrike/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/870/responsive/WarStrike-Online-xs.jpg" alt="WarStrike Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">WarStrike</h3>
+            <p class="text-sm text-gray-500">3D</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/highway-racer-pro/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/822/responsive/Highway-Racer-Pro-xs.jpg" alt="Highway Racer Pro Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Highway Racer Pro</h3>
-                <p class="text-sm text-gray-600">3D</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/highway-racer-pro/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/822/responsive/Highway-Racer-Pro-xs.jpg" alt="Highway Racer Pro Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Highway Racer Pro</h3>
+            <p class="text-sm text-gray-500">3D</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/cs-online/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/434/responsive/CS-Online-xs.jpg" alt="CS Online Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">CS Online</h3>
-                <p class="text-sm text-gray-600">3D</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/cs-online/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/434/responsive/CS-Online-xs.jpg" alt="CS Online Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">CS Online</h3>
+            <p class="text-sm text-gray-500">3D</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/guerrillas-io/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/423/responsive/Guerillas-io-xs.jpg" alt="Guerrillas io Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Guerrillas io</h3>
-                <p class="text-sm text-gray-600">3D</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/guerrillas-io/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/423/responsive/Guerillas-io-xs.jpg" alt="Guerrillas io Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Guerrillas io</h3>
+            <p class="text-sm text-gray-500">3D</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/basketball-io/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/302/responsive/Basketball-io-2-xs.jpg" alt="Basketball io Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Basketball io</h3>
-                <p class="text-sm text-gray-600">3D</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/basketball-io/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/302/responsive/Basketball-io-2-xs.jpg" alt="Basketball io Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Basketball io</h3>
+            <p class="text-sm text-gray-500">3D</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/archer-hero/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/364/responsive/Archer-Hero-Online-xs.jpg" alt="Archer Hero Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Archer Hero</h3>
-                <p class="text-sm text-gray-600">3D</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/archer-hero/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/364/responsive/Archer-Hero-Online-xs.jpg" alt="Archer Hero Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Archer Hero</h3>
+            <p class="text-sm text-gray-500">3D</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/fps-strike/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/902/responsive/fps-strike-online-xs.jpg" alt="FPS Strike Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">FPS Strike</h3>
-                <p class="text-sm text-gray-600">3D</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/fps-strike/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/902/responsive/fps-strike-online-xs.jpg" alt="FPS Strike Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">FPS Strike</h3>
+            <p class="text-sm text-gray-500">3D</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/armedforces-io/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/234/responsive/Armed-Forces-io-xs.jpg" alt="ArmedForces.io Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">ArmedForces.io</h3>
-                <p class="text-sm text-gray-600">3D</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/armedforces-io/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/234/responsive/Armed-Forces-io-xs.jpg" alt="ArmedForces.io Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">ArmedForces.io</h3>
+            <p class="text-sm text-gray-500">3D</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/mob-city/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/418/responsive/Mob-City-xs.jpg" alt="Mob City Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Mob City</h3>
-                <p class="text-sm text-gray-600">3D</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/mob-city/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/418/responsive/Mob-City-xs.jpg" alt="Mob City Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Mob City</h3>
+            <p class="text-sm text-gray-500">3D</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/masked-forces-zombie-survival/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/225/responsive/Masked-Forces-Zombie-Survival-Online-xs.jpg" alt="Masked Forces Zombie Survival Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Masked Forces Zombie Survival</h3>
-                <p class="text-sm text-gray-600">3D</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/masked-forces-zombie-survival/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/225/responsive/Masked-Forces-Zombie-Survival-Online-xs.jpg" alt="Masked Forces Zombie Survival Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Masked Forces Zombie Survival</h3>
+            <p class="text-sm text-gray-500">3D</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/8-ball-pool-billiard/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/442/responsive/8-Ball-Pool-Billiard-xs.jpg" alt="8 Ball Pool Billiard Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">8 Ball Pool Billiard</h3>
-                <p class="text-sm text-gray-600">3D</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/8-ball-pool-billiard/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/442/responsive/8-Ball-Pool-Billiard-xs.jpg" alt="8 Ball Pool Billiard Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">8 Ball Pool Billiard</h3>
+            <p class="text-sm text-gray-500">3D</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/crazy-car-arena/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/317/responsive/Crazy-Car-Arena-Game-xs.jpg" alt="Crazy Car Arena Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Crazy Car Arena</h3>
-                <p class="text-sm text-gray-600">3D</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/crazy-car-arena/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/317/responsive/Crazy-Car-Arena-Game-xs.jpg" alt="Crazy Car Arena Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Crazy Car Arena</h3>
+            <p class="text-sm text-gray-500">3D</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/wasteland-shooters/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/218/responsive/Wasteland-Shooters-xs.jpg" alt="Wasteland Shooters Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Wasteland Shooters</h3>
-                <p class="text-sm text-gray-600">3D</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/wasteland-shooters/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/218/responsive/Wasteland-Shooters-xs.jpg" alt="Wasteland Shooters Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Wasteland Shooters</h3>
+            <p class="text-sm text-gray-500">3D</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/burnout-drift-hunter/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/327/responsive/Burnout-Drift-Hunter-Online-xs.jpg" alt="Burnout Drift Hunter Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Burnout Drift Hunter</h3>
-                <p class="text-sm text-gray-600">3D</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/burnout-drift-hunter/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/327/responsive/Burnout-Drift-Hunter-Online-xs.jpg" alt="Burnout Drift Hunter Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Burnout Drift Hunter</h3>
+            <p class="text-sm text-gray-500">3D</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/survival-karts/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/887/responsive/survival-karts-play-xs.jpg" alt="Survival Karts Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Survival Karts</h3>
-                <p class="text-sm text-gray-600">3D</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/survival-karts/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/887/responsive/survival-karts-play-xs.jpg" alt="Survival Karts Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Survival Karts</h3>
+            <p class="text-sm text-gray-500">3D</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/alien-sky-invasion/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/594/responsive/Alien-Sky-Invasion-xs.jpg" alt="Alien Sky Invasion Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Alien Sky Invasion</h3>
-                <p class="text-sm text-gray-600">3D</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/alien-sky-invasion/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/594/responsive/Alien-Sky-Invasion-xs.jpg" alt="Alien Sky Invasion Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Alien Sky Invasion</h3>
+            <p class="text-sm text-gray-500">3D</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/rome-simulator/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/634/responsive/Rome-Simulator-2-xs.jpg" alt="Rome Simulator Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Rome Simulator</h3>
-                <p class="text-sm text-gray-600">3D</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/rome-simulator/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/634/responsive/Rome-Simulator-2-xs.jpg" alt="Rome Simulator Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Rome Simulator</h3>
+            <p class="text-sm text-gray-500">3D</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/highway-racer-2/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/323/responsive/Highway-Racer-2-xs.jpg" alt="Highway Racer 2 Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Highway Racer 2</h3>
-                <p class="text-sm text-gray-600">3D</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/highway-racer-2/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/323/responsive/Highway-Racer-2-xs.jpg" alt="Highway Racer 2 Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Highway Racer 2</h3>
+            <p class="text-sm text-gray-500">3D</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/army-combat/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/664/responsive/Army-Combat-xs.jpg" alt="Army Combat Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Army Combat</h3>
-                <p class="text-sm text-gray-600">3D</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/army-combat/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/664/responsive/Army-Combat-xs.jpg" alt="Army Combat Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Army Combat</h3>
+            <p class="text-sm text-gray-500">3D</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/bandits-multiplayer-pvp/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/487/responsive/Bandits-Multiplayer-PvP-xs.jpg" alt="Bandits Multiplayer PvP Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Bandits Multiplayer PvP</h3>
-                <p class="text-sm text-gray-600">3D</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/bandits-multiplayer-pvp/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/487/responsive/Bandits-Multiplayer-PvP-xs.jpg" alt="Bandits Multiplayer PvP Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Bandits Multiplayer PvP</h3>
+            <p class="text-sm text-gray-500">3D</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/crazy-karts/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/740/responsive/Crazy-Karts-xs.jpg" alt="Crazy Karts Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Crazy Karts</h3>
-                <p class="text-sm text-gray-600">3D</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/crazy-karts/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/740/responsive/Crazy-Karts-xs.jpg" alt="Crazy Karts Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Crazy Karts</h3>
+            <p class="text-sm text-gray-500">3D</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/offroad-rally/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/461/responsive/Offroad-Rally-xs.jpg" alt="Offroad Rally Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Offroad Rally</h3>
-                <p class="text-sm text-gray-600">3D</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/offroad-rally/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/461/responsive/Offroad-Rally-xs.jpg" alt="Offroad Rally Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Offroad Rally</h3>
+            <p class="text-sm text-gray-500">3D</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/battle-royale-simulator/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/633/responsive/Battle-Royale-Simulator-xs.jpg" alt="Battle Royale Simulator Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Battle Royale Simulator</h3>
-                <p class="text-sm text-gray-600">3D</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/battle-royale-simulator/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/633/responsive/Battle-Royale-Simulator-xs.jpg" alt="Battle Royale Simulator Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Battle Royale Simulator</h3>
+            <p class="text-sm text-gray-500">3D</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/voxel-world/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/937/responsive/voxel-world-xs.jpg" alt="Voxel World Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Voxel World</h3>
-                <p class="text-sm text-gray-600">3D</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/voxel-world/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/937/responsive/voxel-world-xs.jpg" alt="Voxel World Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Voxel World</h3>
+            <p class="text-sm text-gray-500">3D</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/cobraz-io-classic/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/546/responsive/Cobraz.io-Classic-xs.jpg" alt="CobraZ.io Classic Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">CobraZ.io Classic</h3>
-                <p class="text-sm text-gray-600">3D</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/cobraz-io-classic/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/546/responsive/Cobraz.io-Classic-xs.jpg" alt="CobraZ.io Classic Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">CobraZ.io Classic</h3>
+            <p class="text-sm text-gray-500">3D</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/mech-shooter/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/649/responsive/Mech-Shooter-xs.jpg" alt="Mech Shooter Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Mech Shooter</h3>
-                <p class="text-sm text-gray-600">3D</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/mech-shooter/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/649/responsive/Mech-Shooter-xs.jpg" alt="Mech Shooter Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Mech Shooter</h3>
+            <p class="text-sm text-gray-500">3D</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/dont-fall-io/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/182/responsive/Dont-Fall-io-2-xs.jpg" alt="Dont Fall io Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Dont Fall io</h3>
-                <p class="text-sm text-gray-600">3D</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/dont-fall-io/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/182/responsive/Dont-Fall-io-2-xs.jpg" alt="Dont Fall io Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Dont Fall io</h3>
+            <p class="text-sm text-gray-500">3D</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/agent-smith/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/189/responsive/Agent-Smith-2-xs.jpg" alt="Agent Smith Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Agent Smith</h3>
-                <p class="text-sm text-gray-600">3D</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/agent-smith/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/189/responsive/Agent-Smith-2-xs.jpg" alt="Agent Smith Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Agent Smith</h3>
+            <p class="text-sm text-gray-500">3D</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/war-of-ships-io/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/509/responsive/War-of-Ships-io-xs.jpg" alt="War of Ships io Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">War of Ships io</h3>
-                <p class="text-sm text-gray-600">3D</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/war-of-ships-io/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/509/responsive/War-of-Ships-io-xs.jpg" alt="War of Ships io Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">War of Ships io</h3>
+            <p class="text-sm text-gray-500">3D</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/toonz-io/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/230/responsive/Toonz-io-Game-xs.jpg" alt="ToonZ io Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">ToonZ io</h3>
-                <p class="text-sm text-gray-600">3D</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/toonz-io/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/230/responsive/Toonz-io-Game-xs.jpg" alt="ToonZ io Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">ToonZ io</h3>
+            <p class="text-sm text-gray-500">3D</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/legends-arena/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/608/responsive/Legends-Arena-xs.jpg" alt="Legends Arena Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Legends Arena</h3>
-                <p class="text-sm text-gray-600">3D</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/legends-arena/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/608/responsive/Legends-Arena-xs.jpg" alt="Legends Arena Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Legends Arena</h3>
+            <p class="text-sm text-gray-500">3D</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/nova-billiard/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/456/responsive/Nova-Billiard-Game-xs.jpg" alt="Nova Billiard Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Nova Billiard</h3>
-                <p class="text-sm text-gray-600">3D</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/nova-billiard/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/456/responsive/Nova-Billiard-Game-xs.jpg" alt="Nova Billiard Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Nova Billiard</h3>
+            <p class="text-sm text-gray-500">3D</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/hover-racer/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/224/responsive/Hover-Racer-Game-xs.jpg" alt="Hover Racer Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Hover Racer</h3>
-                <p class="text-sm text-gray-600">3D</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/hover-racer/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/224/responsive/Hover-Racer-Game-xs.jpg" alt="Hover Racer Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Hover Racer</h3>
+            <p class="text-sm text-gray-500">3D</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/trains-io/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/470/responsive/Trains-io-Game-xs.jpg" alt="Trains io Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Trains io</h3>
-                <p class="text-sm text-gray-600">3D</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/trains-io/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/470/responsive/Trains-io-Game-xs.jpg" alt="Trains io Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Trains io</h3>
+            <p class="text-sm text-gray-500">3D</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/skateboard-marathon/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/518/responsive/Skateboard-Marathon-xs.jpg" alt="Skateboard Marathon Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Skateboard Marathon</h3>
-                <p class="text-sm text-gray-600">3D</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/skateboard-marathon/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/518/responsive/Skateboard-Marathon-xs.jpg" alt="Skateboard Marathon Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Skateboard Marathon</h3>
+            <p class="text-sm text-gray-500">3D</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/among-impostor/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/472/responsive/Among-Impostor-xs.jpg" alt="Among Impostor Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Among Impostor</h3>
-                <p class="text-sm text-gray-600">3D</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/among-impostor/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/472/responsive/Among-Impostor-xs.jpg" alt="Among Impostor Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Among Impostor</h3>
+            <p class="text-sm text-gray-500">3D</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/hook-wars/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/610/responsive/Hook-Wars-xs.jpg" alt="Hook Wars Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Hook Wars</h3>
-                <p class="text-sm text-gray-600">3D</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/hook-wars/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/610/responsive/Hook-Wars-xs.jpg" alt="Hook Wars Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Hook Wars</h3>
+            <p class="text-sm text-gray-500">3D</p>
+        </div>
+    </a>
         </div>
     </main>
 
-    <footer class="bg-white mt-12 py-8">
+    <footer class="bg-white mt-12 py-8 border-t border-gray-200">
         <div class="container mx-auto px-4 text-center text-gray-600">
             <p>© 2024 Free Games. All rights reserved.</p>
         </div>

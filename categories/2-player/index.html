@@ -11,40 +11,29 @@
         body {
             font-family: 'Inter', sans-serif;
             background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
+            min-height: 100vh;
         }
         .game-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 2rem;
             padding: 2rem;
         }
-        .game-card {
-            height: 100%;
-            transition: transform 0.3s ease;
-        }
-        .game-card:hover {
-            transform: translateY(-5px);
-        }
-        .gradient-text {
-            background: linear-gradient(45deg, #2563eb, #3b82f6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
     </style>
 </head>
-<body>
-    <header class="bg-white shadow-sm">
+<body class="bg-gradient-to-br from-sky-50 to-gray-50">
+    <header class="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/80 backdrop-blur-sm">
         <nav class="container mx-auto px-4 py-4">
             <div class="flex items-center justify-between">
-                <a href="/" class="text-2xl font-bold text-gray-800">Free Games</a>
+                <a href="../../" class="text-2xl font-bold text-gray-800">Free Games</a>
                 <div class="flex space-x-6">
-                    <a href="/categories/action/" class="text-gray-600 hover:text-blue-600">Action 动作</a>
-                    <a href="/categories/puzzle/" class="text-gray-600 hover:text-blue-600">Puzzle 谜题</a>
-                    <a href="/categories/racing/" class="text-gray-600 hover:text-blue-600">Racing 竞速</a>
-                    <a href="/categories/sports/" class="text-gray-600 hover:text-blue-600">Sports 运动</a>
-                    <a href="/categories/strategy/" class="text-gray-600 hover:text-blue-600">Strategy 策略</a>
-                    <a href="/categories/casual/" class="text-gray-600 hover:text-blue-600">Casual 休闲</a>
-                    <a href="/categories/io-games/" class="text-gray-600 hover:text-blue-600">.io Games</a>
+                    <a href="../../categories/action/" class="text-gray-600 hover:text-blue-600">Action</a>
+                    <a href="../../categories/puzzle/" class="text-gray-600 hover:text-blue-600">Puzzle</a>
+                    <a href="../../categories/racing/" class="text-gray-600 hover:text-blue-600">Racing</a>
+                    <a href="../../categories/sports/" class="text-gray-600 hover:text-blue-600">Sports</a>
+                    <a href="../../categories/strategy/" class="text-gray-600 hover:text-blue-600">Strategy</a>
+                    <a href="../../categories/casual/" class="text-gray-600 hover:text-blue-600">Casual</a>
+                    <a href="../../categories/io-games/" class="text-gray-600 hover:text-blue-600">.io Games</a>
                 </div>
                 <button class="p-2 hover:bg-gray-100 rounded-full">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -57,231 +46,195 @@
 
     <main class="container mx-auto px-4 py-8">
         <div class="text-center mb-12">
-            <h1 class="text-4xl font-bold mb-4 gradient-text">2-Player Games</h1>
+            <h1 class="text-4xl font-bold mb-4 bg-gradient-to-r from-sky-600 to-blue-600 bg-clip-text text-transparent">2-Player Games</h1>
             <p class="text-gray-600 max-w-2xl mx-auto">Play the best free 2-Player games online. No download required!</p>
         </div>
 
         <div class="game-grid">
             
-    <div class="game-card">
-        <a href="../../games/mini-cars-racing/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/1010/responsive/Mini-Cars-Racing-xs.jpg" alt="Mini Cars Racing Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Mini Cars Racing</h3>
-                <p class="text-sm text-gray-600">2-Player</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/mini-cars-racing/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/1010/responsive/Mini-Cars-Racing-xs.jpg" alt="Mini Cars Racing Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Mini Cars Racing</h3>
+            <p class="text-sm text-gray-500">2-Player</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/get-on-top/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/697/responsive/Get-on-Top-xs.jpg" alt="Get On Top Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Get On Top</h3>
-                <p class="text-sm text-gray-600">2-Player</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/get-on-top/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/697/responsive/Get-on-Top-xs.jpg" alt="Get On Top Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Get On Top</h3>
+            <p class="text-sm text-gray-500">2-Player</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/rooftop-duel/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/1002/responsive/Rooftop-Duel-Online-xs.jpg" alt="Rooftop Duel Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Rooftop Duel</h3>
-                <p class="text-sm text-gray-600">2-Player</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/rooftop-duel/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/1002/responsive/Rooftop-Duel-Online-xs.jpg" alt="Rooftop Duel Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Rooftop Duel</h3>
+            <p class="text-sm text-gray-500">2-Player</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/car-football/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/405/responsive/Car-Football-xs.jpg" alt="Car Football Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Car Football</h3>
-                <p class="text-sm text-gray-600">2-Player</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/car-football/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/405/responsive/Car-Football-xs.jpg" alt="Car Football Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Car Football</h3>
+            <p class="text-sm text-gray-500">2-Player</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/basketball-king/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/907/responsive/basketball-king-xs.jpg" alt="Basketball King Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Basketball King</h3>
-                <p class="text-sm text-gray-600">2-Player</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/basketball-king/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/907/responsive/basketball-king-xs.jpg" alt="Basketball King Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Basketball King</h3>
+            <p class="text-sm text-gray-500">2-Player</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/tank-arena/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/956/responsive/Tank-Arena-Online-xs.jpg" alt="Tank Arena Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Tank Arena</h3>
-                <p class="text-sm text-gray-600">2-Player</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/tank-arena/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/956/responsive/Tank-Arena-Online-xs.jpg" alt="Tank Arena Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Tank Arena</h3>
+            <p class="text-sm text-gray-500">2-Player</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/head-soccer-2022/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/624/responsive/Head-Soccer-2022-xs.jpg" alt="Head Soccer 2022 Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Head Soccer 2022</h3>
-                <p class="text-sm text-gray-600">2-Player</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/head-soccer-2022/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/624/responsive/Head-Soccer-2022-xs.jpg" alt="Head Soccer 2022 Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Head Soccer 2022</h3>
+            <p class="text-sm text-gray-500">2-Player</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/super-mini-racing/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/819/responsive/Super-Mini-Racing-xs.jpg" alt="Super Mini Racing Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Super Mini Racing</h3>
-                <p class="text-sm text-gray-600">2-Player</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/super-mini-racing/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/819/responsive/Super-Mini-Racing-xs.jpg" alt="Super Mini Racing Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Super Mini Racing</h3>
+            <p class="text-sm text-gray-500">2-Player</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/basketball-slam-dunk/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/200/responsive/Basketball-Slam-Dunk-xs.jpg" alt="Basketball Slam Dunk Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Basketball Slam Dunk</h3>
-                <p class="text-sm text-gray-600">2-Player</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/basketball-slam-dunk/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/200/responsive/Basketball-Slam-Dunk-xs.jpg" alt="Basketball Slam Dunk Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Basketball Slam Dunk</h3>
+            <p class="text-sm text-gray-500">2-Player</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/snake-football/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/706/responsive/Snake-Football-xs.jpg" alt="Snake Football Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Snake Football</h3>
-                <p class="text-sm text-gray-600">2-Player</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/snake-football/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/706/responsive/Snake-Football-xs.jpg" alt="Snake Football Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Snake Football</h3>
+            <p class="text-sm text-gray-500">2-Player</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/2-player-crazy-racer/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/617/responsive/2-Player-Crazy-Racer-xs.jpg" alt="2 Player Crazy Racer Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">2 Player Crazy Racer</h3>
-                <p class="text-sm text-gray-600">2-Player</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/2-player-crazy-racer/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/617/responsive/2-Player-Crazy-Racer-xs.jpg" alt="2 Player Crazy Racer Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">2 Player Crazy Racer</h3>
+            <p class="text-sm text-gray-500">2-Player</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/airplane-racer/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/268/responsive/Airplane-Racer-xs.jpg" alt="Airplane Racer Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Airplane Racer</h3>
-                <p class="text-sm text-gray-600">2-Player</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/airplane-racer/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/268/responsive/Airplane-Racer-xs.jpg" alt="Airplane Racer Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Airplane Racer</h3>
+            <p class="text-sm text-gray-500">2-Player</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/skibidi-toilet-io/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/540/responsive/Skibidi-Toilet-xs.jpg" alt="Skibidi Toilet io Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Skibidi Toilet io</h3>
-                <p class="text-sm text-gray-600">2-Player</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/skibidi-toilet-io/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/540/responsive/Skibidi-Toilet-xs.jpg" alt="Skibidi Toilet io Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Skibidi Toilet io</h3>
+            <p class="text-sm text-gray-500">2-Player</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/american-touchdown/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/545/responsive/American-Touchdown-Game-xs.jpg" alt="American Touchdown Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">American Touchdown</h3>
-                <p class="text-sm text-gray-600">2-Player</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/american-touchdown/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/545/responsive/American-Touchdown-Game-xs.jpg" alt="American Touchdown Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">American Touchdown</h3>
+            <p class="text-sm text-gray-500">2-Player</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/fire-and-water/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/469/responsive/Fire-and-Water-xs.jpg" alt="Fire and Water Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Fire and Water</h3>
-                <p class="text-sm text-gray-600">2-Player</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/fire-and-water/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/469/responsive/Fire-and-Water-xs.jpg" alt="Fire and Water Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Fire and Water</h3>
+            <p class="text-sm text-gray-500">2-Player</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/football-king/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/739/responsive/Football-King-xs.jpg" alt="Football King Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Football King</h3>
-                <p class="text-sm text-gray-600">2-Player</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/football-king/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/739/responsive/Football-King-xs.jpg" alt="Football King Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Football King</h3>
+            <p class="text-sm text-gray-500">2-Player</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/spartahoppers/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/949/responsive/sparta-hoppers-game-xs.jpg" alt="SpartaHoppers Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">SpartaHoppers</h3>
-                <p class="text-sm text-gray-600">2-Player</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/spartahoppers/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/949/responsive/sparta-hoppers-game-xs.jpg" alt="SpartaHoppers Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">SpartaHoppers</h3>
+            <p class="text-sm text-gray-500">2-Player</p>
+        </div>
+    </a>
 
-    <div class="game-card">
-        <a href="../../games/snake/" class="block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-            <div class="relative pt-[56.25%]">
-                <img src="https://www.onlinegames.io/media/posts/919/responsive/snake-xs.jpg" alt="Snake Thumbnail" class="absolute top-0 left-0 w-full h-full object-cover">
-            </div>
-            <div class="p-4">
-                <h3 class="text-lg font-semibold text-gray-900">Snake</h3>
-                <p class="text-sm text-gray-600">2-Player</p>
-            </div>
-        </a>
-    </div>
+    <a href="../../games/snake/" class="group block space-y-3 rounded-2xl bg-white/60 p-3 shadow-sm transition-all duration-300 hover:shadow-2xl hover:shadow-sky-500/20 hover:-translate-y-2 backdrop-blur-sm">
+        <div class="overflow-hidden rounded-xl">
+            <img src="https://www.onlinegames.io/media/posts/919/responsive/snake-xs.jpg" alt="Snake Thumbnail" class="h-full w-full object-cover transform transition-transform duration-500 ease-in-out group-hover:scale-110">
+        </div>
+        <div class="text-center">
+            <h3 class="font-bold text-gray-900 truncate">Snake</h3>
+            <p class="text-sm text-gray-500">2-Player</p>
+        </div>
+    </a>
         </div>
     </main>
 
-    <footer class="bg-white mt-12 py-8">
+    <footer class="bg-white mt-12 py-8 border-t border-gray-200">
         <div class="container mx-auto px-4 text-center text-gray-600">
             <p>© 2024 Free Games. All rights reserved.</p>
         </div>
