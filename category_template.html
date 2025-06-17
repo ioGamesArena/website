@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title} Games - Free Online Games</title>
+    <meta name="description" content="{description}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/css">
+        body {{ font-family: 'Inter', sans-serif; }}
+        .animated-gradient {{
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }}
+        @keyframes gradient {{
+            0% {{ background-position: 0% 50%; }}
+            50% {{ background-position: 100% 50%; }}
+            100% {{ background-position: 0% 50%; }}
+        }}
+        .gradient-text {{
+            background: linear-gradient(45deg, #4F46E5, #06B6D4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }}
+    </style>
+</head>
+<body class="bg-gray-50">
+    <header class="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/80 backdrop-blur-sm">
+        <div class="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
+            <a href="/" class="flex items-center space-x-2">
+                <span class="text-xl font-bold tracking-tight">Free Games</span>
+            </a>
+            <nav class="hidden items-center space-x-6 text-sm font-medium md:flex">
+                <a href="../categories/action/" class="transition-colors hover:text-sky-500">Action 动作</a>
+                <a href="../categories/puzzle/" class="transition-colors hover:text-sky-500">Puzzle 谜题</a>
+                <a href="../categories/racing/" class="transition-colors hover:text-sky-500">Racing 竞速</a>
+                <a href="../categories/sports/" class="transition-colors hover:text-sky-500">Sports 运动</a>
+                <a href="../categories/strategy/" class="transition-colors hover:text-sky-500">Strategy 策略</a>
+                <a href="../categories/casual/" class="transition-colors hover:text-sky-500">Casual 休闲</a>
+                <a href="../categories/io-games/" class="transition-colors hover:text-sky-500">.io Games</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <button id="search-button" class="p-2 text-gray-500 hover:text-gray-800">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="animated-gradient py-20">
+            <div class="container mx-auto max-w-6xl px-4">
+                <h1 class="gradient-text text-5xl font-bold text-center mb-8">{title} Games</h1>
+                <p class="text-xl text-gray-600 text-center mb-12">{description}</p>
+            </div>
+        </section>
+
+        <div class="container mx-auto max-w-7xl px-4 py-12">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                {game_cards}
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 mt-12">
+        <div class="container mx-auto max-w-6xl px-4 py-8">
+            <p class="text-center text-gray-600">© 2024 Free Games. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 
